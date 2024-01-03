@@ -1,4 +1,8 @@
 ---
+import '../styles/reset.css'
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
+
 const pageTitle = 'Мессианские Псалмы'
 ---
 
@@ -11,9 +15,7 @@ const pageTitle = 'Мессианские Псалмы'
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">home</a>
-		<a href="/psalms/">psalms</a>
-		<a href="/about/">about</a>
+		<Navigation />
 		<h1>Мессианские Псалмы</h1>
 	</body>
 </html>

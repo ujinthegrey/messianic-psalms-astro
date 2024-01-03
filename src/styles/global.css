@@ -1,0 +1,45 @@
+:root {
+    --dark: #111;
+    --semidark: #333;
+    --green: #9b9;
+    --blue: #a8b;
+    --lightgray: #ddd;
+
+    --navigation-height: 4rem;
+}
+body {
+    background-color: var(--semidark);
+    color: var(--lightgray);
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+/* --------------------GRID----------------- */
+.content-grid,
+.full-width {
+    display: grid;
+    grid-template-columns: 
+        [full-width-start]
+        minmax(15px, 1fr)
+        [content-start]
+        minmax(280px, 800px)
+        [content-end]
+        minmax(15px, 1fr)
+        [full-width-end];
+}
+.content-grid > *,
+.full-width > * {
+    grid-column: content; 
+}
+.content-grid >.full-width {
+    grid-column: full-width;
+}
+h1 {
+    color: var(--blue);
+    text-align: center;
+    font-size: 2rem;
+}
+p {
+    max-width: 960px;
+    margin: 0 auto;
+}

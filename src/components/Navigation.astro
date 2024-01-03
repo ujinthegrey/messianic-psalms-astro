@@ -1,0 +1,19 @@
+---
+const links = [
+    {'href': '/', 'title': 'на главную'},
+    {'href': '/about', 'title': 'О проекте'},
+    {'href': '/psalms', 'title': 'ОПсалмы'},
+]
+---
+<nav class="full-width content-grid">
+    <h2>Главная навигация</h2>
+    <ul>
+        {links.map((link) => <a href={link.href}>{link.title}</a>)}
+    </ul>
+</nav>
+
+<style>
+    nav {
+
+    }
+</style>
