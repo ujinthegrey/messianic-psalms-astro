@@ -1,0 +1,44 @@
+---
+const links = [
+    {
+        'href': 'https://github.com/ujinthegrey/messianic-psalms-astro',
+        'title': `Проект 'messianic-psalms-astro' на GitHub`
+    },
+    {
+        'href': 'https://www.youtube.com/watch?v=z0IlXm70X2s&list=PLkBa4gMtrImjRO7fO-zpsMeJZjnyEGLf7',
+        'title': `Плейлист с видео-проповедями на Мессианские Псалмы на YouTube`
+    },
+    {
+        'href': '/technology',
+        'title': `О технологиях проекта 'Мессинаские Псалмыэ'`
+    },
+]
+---
+<footer class="full-width contsnt-grid">
+    <nav>
+        <h2 class="hidden-title">Вспомогательная навигация</h2>
+        <ul>
+            {links.map((link) => <li><a href={link.href} target="_blank">{link.title}</a></li>)}
+        </ul>
+    </nav>
+    <p>&#169; 2024 Eugene Koshelev</p>
+</footer>
+<style>
+    footer {
+        background-color: var(--dark);
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    nav{
+        margin: 2rem 0;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem 1rem;
+    }
+    p {
+        margin-bottom: 4rem;
+    }
+</style>
+

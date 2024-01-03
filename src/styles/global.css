@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 :root {
     --dark: #111;
     --semidark: #333;
@@ -10,6 +11,7 @@
 body {
     background-color: var(--semidark);
     color: var(--lightgray);
+    font-family: 'Roboto', system-ui, sans-serif;
     font-size: 1.5rem;
     line-height: 1.7;
 }
@@ -34,6 +36,15 @@ body {
 .content-grid >.full-width {
     grid-column: full-width;
 }
+
+/* ----------------------TITLES--------------------- */
+.hidden-title {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1000;
+}
+
 h1 {
     color: var(--blue);
     text-align: center;
