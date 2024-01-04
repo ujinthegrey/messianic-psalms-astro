@@ -1,37 +1,13 @@
 ---
 const links = [
-    {'href': '/', 'title': 'на главную'},
     {'href': '/about', 'title': 'О проекте'},
-    {'href': '/psalms', 'title': 'Псалмы'},
+    {'href': '/technology', 'title': 'О технологиях пректа'},
+    {'href': '/about-author', 'title': 'Об авторе'},
 ]
 ---
-<nav class="full-width content-grid">
+<nav class="full-width content-grid navigation hidden-nav">
     <h2 class="hidden-title">Главная навигация</h2>
-    <ul>
-        {links.map((link) => <li><a href={link.href}>{link.title}</a></li>)}
+    <ul class="nav-list">
+        {links.map((link) => <li class="nav-item"><a href={link.href} class="nav-link">{link.title}</a></li>)}
     </ul>
 </nav>
-<style>
-    nav,
-    ul,
-    li {
-        height: var(--navigation-height);
-    }
-    a {
-        line-height: var(--navigation-height);
-    }
-    nav {
-        background-color: var(--dark);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-    ul {
-        display: flex;
-        gap: .5rem 1rem;
-        justify-content: space-around;
-        text-align: center;
-    }
-
-</style>

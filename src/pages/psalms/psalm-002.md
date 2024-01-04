@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MDPostLayout.astro'
 audio: '../../audio/psalm-002.mp3'
 author: 'Евгений Кошелев'
 date: 2023-03-16

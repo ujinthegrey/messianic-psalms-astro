@@ -4,9 +4,10 @@
     --semidark: #333;
     --green: #9b9;
     --blue: #a8b;
+    --red: #f66;
     --lightgray: #ddd;
 
-    --navigation-height: 4rem;
+    --header-height: 4rem;
 }
 body {
     background-color: var(--semidark);
@@ -22,11 +23,11 @@ body {
     display: grid;
     grid-template-columns: 
         [full-width-start]
-        minmax(15px, 1fr)
+        minmax(1rem, 1fr)
         [content-start]
-        minmax(280px, 800px)
+        minmax(17rem, 55rem)
         [content-end]
-        minmax(15px, 1fr)
+        minmax(1rem, 1fr)
         [full-width-end];
 }
 .content-grid > *,
@@ -44,13 +45,34 @@ body {
     overflow: hidden;
     z-index: -1000;
 }
-
-h1 {
+.header-title {
+    color: var(--blue);
+    font-size: 1.7rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.page-title {
     color: var(--blue);
     text-align: center;
     font-size: 2rem;
+    margin-top: var(--header-height);
 }
-p {
-    max-width: 960px;
-    margin: 0 auto;
+.article-title {
+    color: var(--green);
+    text-align: center;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+/* ----------------HEADER-BERGER-MENU-------------------- */
+.navigation {
+    background-color: var(--dark);
+}
+.hidden-nav {
+    display: none;
+}
+.nav-list {
+    display: flex;
+    flex-direction: column;
 }
