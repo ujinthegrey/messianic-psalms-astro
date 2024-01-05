@@ -1,13 +1,35 @@
----
-const links = [
-    {'href': '/about', 'title': 'О проекте'},
-    {'href': '/technology', 'title': 'О технологиях пректа'},
-    {'href': '/about-author', 'title': 'Об авторе'},
-]
----
-<nav class="full-width content-grid navigation hidden-nav">
-    <h2 class="hidden-title">Главная навигация</h2>
-    <ul class="nav-list">
-        {links.map((link) => <li class="nav-item"><a href={link.href} class="nav-link">{link.title}</a></li>)}
+<nav class="navigation">
+    <h2 class="navigation-title hidden-title">Вспомогательная навигация</h2>
+    <ul class="navigation-list">
+        <li class="navigation-item">
+            <a href="/" class="navigation-link">Мессианские Псалмы</a>
+        </li>
     </ul>
 </nav>
+<style>
+    .navigation {
+        background-color: var(--dark);
+        height: var(--header-height);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 70;
+        overflow: hidden;
+    }
+    .navigation,
+    .navigation-list,
+    .navigation-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .navigation-link {
+        color: var(--blue);
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+    }
+</style>

@@ -1,12 +1,19 @@
 ---
 const links = [
+{
+        'href': '/technology/',
+        'title': 'О технологиях',
+        'target': '_self'
+    },
     {
         'href': 'https://github.com/ujinthegrey/messianic-psalms-astro',
-        'title': 'GitHub'
+        'title': 'GitHub',
+        'target': '_blank'
     },
     {
         'href': 'https://www.youtube.com/watch?v=z0IlXm70X2s&list=PLkBa4gMtrImjRO7fO-zpsMeJZjnyEGLf7',
-        'title': 'YouTube'
+        'title': 'YouTube',
+        'target': '_blank'
     },
 ]
 ---
@@ -14,7 +21,7 @@ const links = [
     <nav>
         <h2 class="hidden-title">Вспомогательная навигация</h2>
         <ul>
-            {links.map((link) => <li><a href={link.href} target="_blank">{link.title}</a></li>)}
+            {links.map((link) => <li><a href={link.href} target={link.target}>{link.title}</a></li>)}
         </ul>
     </nav>
     <p>&#169; 2024 Eugene Koshelev</p>

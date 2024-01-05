@@ -1,8 +1,9 @@
 ---
-layout: '../../layouts/MDPostLayout.astro'
 audio: '../../audio/psalm-008.mp3'
 author: 'Евгений Кошелев'
 date: 2023-04-05
+id: '008'
+layout: '../../layouts/MDPostLayout.astro'
 subTitle: 'Мессия - совершенный Человек'
 title: 'Что есть человек?'
 ---

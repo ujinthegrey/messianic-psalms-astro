@@ -4,7 +4,8 @@ import Layout from './Layout.astro'
 const { frontmatter } = Astro.props
 ---
 
-<Layout pageTitle={frontmatter.title}>
+<Layout pageTitle={frontmatter.title}>	
+	<h1 class="page-title">{frontmatter.title}</h1>
 	{ frontmatter.audio && <audio src={frontmatter.audio} controls/> }	
 	<p>{frontmatter.author}</p>	
 	<slot />
