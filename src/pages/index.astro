@@ -4,8 +4,13 @@ import '../styles/global.css'
 import Layout from '../layouts/Layout.astro'
 
 const pageTitle = 'Мессианские Псалмы'
+const allPsalms = await Astro.glob('./psalms/*.md')
 ---
 
 <Layout pageTitle={pageTitle}>
 	<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo sint tempora. Ex quod aliquid impedit quae, consequuntur nemo ratione quos quidem minima nulla quam velit magni animi provident atque dolorum sunt eos mollitia, necessitatibus incidunt voluptatum praesentium. Numquam id sit iure voluptas nemo dolorem nam ut aliquid cupiditate consequuntur!</p>
+	<ol>
+		<li><a href="">О проекте</a></li>
+	</ol>
+	{ allPsalms.map((psalm) => <li><a href={psalm.url}>{psalm.frontmatter.title}</a></li>) }
 </Layout>
