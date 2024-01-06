@@ -44,12 +44,20 @@ body {
     overflow: hidden;
     z-index: -1000;
 }
-.article-title {
+.page-title {
+    color: var(--blue);
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: .25rem;
+}
+/* .article-title {
     color: var(--green);
     text-align: center;
     font-size: 1.7rem;
     margin-top: 2rem;
-}
+} */
 
 /* ----------------HEADER-BERGER-MENU-------------------- */
 .navigation {

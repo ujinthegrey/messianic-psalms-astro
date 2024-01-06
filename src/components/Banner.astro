@@ -1,12 +1,16 @@
 ---
-const url = `url('https://images.unsplash.com/photo-1513346940221-6f673d962e97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
+const { imgUrl = '../../img/index.png' } = Astro.props
+const image = `url('${imgUrl}')`
 ---
 <div class="full-width banner" />
-<style define:vars={{url}}>
+<style define:vars={{image}}>
     .banner{
         background-color: var(--red);
-        background-image: var(--url);
-        height: 80vmin;
+        background-image: var(--image);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vmin;
         overflow: hidden;
     }
 </style>

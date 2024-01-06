@@ -3,6 +3,7 @@ audio: '../../audio/psalm-002.mp3'
 author: 'Евгений Кошелев'
 date: 2023-03-16
 id: '002'
+imgUrl: '../../img/psalm-002.png'
 layout: '../../layouts/MDPostLayout.astro'
 subTitle: 'Мессия - помазанный Царь'
 title: 'Великий мятеж и великий исход великого мятежа'

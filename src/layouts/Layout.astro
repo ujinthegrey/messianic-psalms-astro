@@ -2,9 +2,10 @@
 import '../styles/reset.css'
 import '../styles/global.css'
 import Navigation from '../components/Navigation.astro'
+import Banner from '../components/Banner.astro'
 import Footer from '../components/Footer.astro'
 
-const { pageTitle } = Astro.props
+const { pageTitle, imgUrl } = Astro.props
 ---
 
 <html lang="ru">
@@ -17,6 +18,7 @@ const { pageTitle } = Astro.props
 	</head>
 	<body class="full-width content-grid">
 		<Navigation />
+		<Banner imgUrl={imgUrl} />
 		<slot />
 		<Footer />
 		<script>
