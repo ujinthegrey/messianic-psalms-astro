@@ -1,32 +1,11 @@
 ---
-import '../styles/reset.css'
-import '../styles/global.css'
-import Layout from '../layouts/Layout.astro'
-import PsalmCard from '../components/PsalmCard.astro'
+import MainLayout from '../layouts/MainLayout.astro'
+import MainNavigation from '../components/MainNavigation.astro'
 
 const pageTitle = 'Мессианские Псалмы'
-const imgUrl = './img/index.png'
-const allPsalms = await Astro.glob('./psalms/*.md')
+const imgUrl = './img/index.webp'
 ---
 
-<Layout pageTitle={pageTitle} imgUrl={imgUrl} >
-	<nav class="main-nav">
-		<h1 class="hidden-title">Главная Навигация</h1>
-		<ol>
-			<li><a href="/about/">О проекте</a></li>
-			{ 
-				allPsalms.map((psalm) => 
-					<PsalmCard
-					url={psalm.url}
-					title={psalm.frontmatter.title}
-					id={psalm.frontmatter.id}
-					/>
-			) }
-		</ol>
-	</nav>
-</Layout>
-<style>
-	.main-nav {
-		margin: 2rem 0;
-	}
-</style>
+<MainLayout pageTitle={pageTitle} imgUrl={imgUrl} >
+	<MainNavigation />
+</MainLayout>

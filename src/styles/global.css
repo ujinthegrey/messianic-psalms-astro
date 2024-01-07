@@ -46,27 +46,31 @@ body {
 }
 .page-title {
     color: var(--blue);
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
     line-height: 1;
     text-align: center;
     margin: 2rem 0;
     letter-spacing: .25rem;
 }
-/* .article-title {
-    color: var(--green);
-    text-align: center;
-    font-size: 1.7rem;
-    margin-top: 2rem;
-} */
 
-/* ----------------HEADER-BERGER-MENU-------------------- */
-.navigation {
-    background-color: var(--dark);
+/* ----------------LINKS-AND-BOTTOM-------------------- */
+a,
+button {
+    transition: opacity .2s;
+    cursor: pointer;
 }
-.hidden-nav {
-    display: none;
+a:hover,
+button:hover {
+    opacity: .85;
 }
-.nav-list {
-    display: flex;
-    flex-direction: column;
+
+/* --------------PARAGRAPHS-AND-HEADERS------------- */
+body > p {
+    margin-bottom: 1.5rem;
+}
+body > audio {
+    margin-bottom: 1.5rem;
+    min-width: 100%;
+    background-color: #fff;
 }

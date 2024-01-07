@@ -3,8 +3,8 @@ audio: '../../audio/psalm-008.mp3'
 author: 'Евгений Кошелев'
 date: 2023-04-05
 id: '008'
-imgUrl: '../../img/psalm-008.png'
-layout: '../../layouts/MDPostLayout.astro'
+imgUrl: '../../img/psalm-008.webp'
+layout: '../../layouts/PostLayout.astro'
 subTitle: 'Мессия - совершенный Человек'
 title: 'Что есть человек?'
 ---

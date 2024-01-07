@@ -1,0 +1,21 @@
+---
+import MainLayout from './MainLayout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<MainLayout pageTitle={frontmatter.title} imgUrl={frontmatter.imgUrl}>	
+	<h1 class="page-title">{frontmatter.title}</h1>
+	{ frontmatter.audio && <audio src={frontmatter.audio} controls/> }	
+	<slot />
+	<p class="city">Самара,</p>
+	<p class="date"><time>{frontmatter.date.slice(0,10)}</time></p>
+	<p class="author">{frontmatter.author}</p>	
+</MainLayout>
+<style>
+	.city,
+	.date,
+	.author {
+		text-align: center;
+	}
+</style>

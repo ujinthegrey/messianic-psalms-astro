@@ -1,12 +1,14 @@
 ---
 import '../styles/reset.css'
 import '../styles/global.css'
-import Layout from '../layouts/Layout.astro'
+import MainLayout from '../layouts/MainLayout.astro'
 
 const pageTitle = 'О технологиях проекта'
+const imgUrl = '../img/technology.webp'
 ---
 
-<Layout pageTitle={pageTitle}>
-	<p>Проект "Мессианские Псалмы" выполнен на фреймворке Astro.</p>
+<MainLayout pageTitle={pageTitle} imgUrl={imgUrl}>
+	<h1 class="page-title">{pageTitle}</h1>
+	<p>Проект "Мессианские Псалмы" выполнен на фреймворке Astro. Такой выьор обусловлен тем, что Astro позволяет выполнять скрипты на стороне сервера, а клиенту возвращать статическую страницу. Этот простой подход позволяет выигрывать по скорости загрузки страницы, например, у реактивных фреймворков, которые, к слову сказать, всё равно приходится совмещать с SSR.</p>
 	<p>С уважением и с молитвой о Вас,<br>Евгений Кошелев.</p>
-</Layout>
+</MainLayout>
