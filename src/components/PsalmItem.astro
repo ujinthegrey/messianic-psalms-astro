@@ -7,18 +7,27 @@ const { url, id, title, description = 'Увы, описание отсутств
     </a>
     <br>
     <button class="desctiption-btn">Открыть описание</button>
-    <p class="description hidden-description">{description}</p>
+    <p class="description hidden-description">button + script = {description}</p>
+    <details>
+        <summary>Описание</summary>
+        <p class="detailis-description">details + summary + p = {description}</p>
+    </details>
 </li>
 <style>
-    button {
-        min-width: 20rem;
-        padding: 1rem 2rem;
+    button,
+    summary {
+        color: var(--green);
+        width: 15rem;
+        padding: 1rem 0;
         margin-top: 1rem;
-        font-size: 1.25rem;
+        font-size: 1rem;
         border: solid 2px var(--lightgray);
         border-radius: .5rem;
+        display: flex;
+        justify-content: center;
     }
-    .description {
+    .description,
+    .detailis-description {
         margin: 1rem 0;
     }
     .hidden-description {

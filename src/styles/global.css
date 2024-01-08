@@ -56,12 +56,14 @@ body {
 
 /* ----------------LINKS-AND-BOTTOM-------------------- */
 a,
-button {
+button,
+summary {
     transition: opacity .2s;
     cursor: pointer;
 }
 a:hover,
-button:hover {
+button:hover,
+summary:hover {
     opacity: .85;
 }
 
