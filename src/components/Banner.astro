@@ -2,11 +2,7 @@
 const { imgUrl = '../../img/index.webp' } = Astro.props
 const imgbg = `url('${imgUrl}')`
 ---
-<!-- <div class="full-width">
-    <img src={imgUrl} alt="banner">
-</div> -->
 <div class="full-width" />
-
 <style define:vars={{imgbg}}>
     div{
         background-color: var(--dark);
@@ -17,18 +13,5 @@ const imgbg = `url('${imgUrl}')`
         height: 70vmin;
         overflow: hidden;
         position: relative;
-    }
-    img {
-/*         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100^; */
-        max-width: 100%;
-        height: auto;
-        vertical-align: middle;
-        font-style: italic;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 </style>

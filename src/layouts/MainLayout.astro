@@ -1,6 +1,7 @@
 ---
 import '../styles/reset.css'
 import '../styles/global.css'
+import { ViewTransitions } from "astro:transitions"
 import Navigation from '../components/Navigation.astro'
 import Banner from '../components/Banner.astro'
 import Footer from '../components/Footer.astro'
@@ -15,6 +16,7 @@ const { pageTitle, imgUrl } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<ViewTransitions />
 	</head>
 	<body class="content-grid">
 		<Navigation />

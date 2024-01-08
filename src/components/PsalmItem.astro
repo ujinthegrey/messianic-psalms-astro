@@ -1,0 +1,29 @@
+---
+const { url, id, title, description = 'Увы, описание отсутствует :-(' } = Astro.props
+---
+<li>
+    <a href={url}>
+        {id} {title}
+    </a>
+    <br>
+    <button class="desctiption-btn">Открыть описание</button>
+    <p class="description hidden-description">{description}</p>
+</li>
+<style>
+    button {
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        border: solid 2px var(--lightgray);
+        border-radius: .5rem;
+    }
+    .description {
+        margin-top: 1rem;
+    }
+    .hidden-description {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -1000;
+    }
+</style>

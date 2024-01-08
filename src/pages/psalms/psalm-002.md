@@ -2,6 +2,7 @@
 audio: '../../audio/psalm-002.mp3'
 author: 'Евгений Кошелев'
 date: 2023-03-16
+description: 'Описание псалма'
 id: '002'
 imgUrl: '../../img/psalm-002.webp'
 layout: '../../layouts/PostLayout.astro'

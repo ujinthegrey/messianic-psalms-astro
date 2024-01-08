@@ -1,4 +1,5 @@
 ---
+import PsalmItem from "./PsalmItem.astro"
 const allPsalms = await Astro.glob('../pages/psalms/*.md')
 ---
 <nav class="content-grid">
@@ -6,10 +7,20 @@ const allPsalms = await Astro.glob('../pages/psalms/*.md')
     <ol>
         <li><a href="/about/">О проекте</a></li>
         { allPsalms.map((psalm) =>
-            <li><a href={psalm.url}>{psalm.frontmatter.id} {psalm.frontmatter.title}</a></li>
+            <PsalmItem
+                url={psalm.url}
+                id={psalm.frontmatter.id}
+                title={psalm.frontmatter.title}
+                description={psalm.frontmatter.description}
+                client:visible
+            />
          ) }
+
         <li><a href="/about-author/">Об авторе</a></li>
     </ol>
+    <script>
+        import '../scripts/descriptions.js'
+    </script>
 </nav>
 <style>
     nav {

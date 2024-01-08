@@ -1,0 +1,11 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+
+const pageTitle = 'Страница не найдена'
+const imgUrl = '../img/404.webp'
+---
+
+<MainLayout pageTitle={pageTitle} imgUrl={imgUrl}>
+	<h1 class="page-title">{pageTitle}</h1>
+	<p>К сожалению, сервер не может найти данные согласно Вашему запросу.</p>	
+</MainLayout>
