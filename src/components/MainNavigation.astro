@@ -12,7 +12,6 @@ const allPsalms = await Astro.glob('../pages/psalms/*.md')
                 id={psalm.frontmatter.id}
                 title={psalm.frontmatter.title}
                 description={psalm.frontmatter.description}
-                client:visible
             />
          ) }
 
@@ -29,6 +28,6 @@ const allPsalms = await Astro.glob('../pages/psalms/*.md')
     ol {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 </style>

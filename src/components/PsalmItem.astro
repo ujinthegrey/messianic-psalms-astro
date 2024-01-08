@@ -3,7 +3,7 @@ const { url, id, title, description = 'Увы, описание отсутств
 ---
 <li>
     <a href={url}>
-        {id} {title}
+        Псалом {id.replace(/^0+/, '')} {title}
     </a>
     <br>
     <button class="desctiption-btn">Открыть описание</button>
@@ -11,6 +11,7 @@ const { url, id, title, description = 'Увы, описание отсутств
 </li>
 <style>
     button {
+        min-width: 20rem;
         padding: 1rem 2rem;
         margin-top: 1rem;
         font-size: 1.25rem;
@@ -18,9 +19,10 @@ const { url, id, title, description = 'Увы, описание отсутств
         border-radius: .5rem;
     }
     .description {
-        margin-top: 1rem;
+        margin: 1rem 0;
     }
     .hidden-description {
+        margin: 0;
         width: 1px;
         height: 1px;
         overflow: hidden;
