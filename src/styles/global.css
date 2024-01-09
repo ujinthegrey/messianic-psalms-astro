@@ -8,6 +8,9 @@
     --lightgray: #ddd;
 
     --header-height: 4rem;
+    --banner-height: 70vmin;
+
+    --play-btn-size: 50px;
 }
 body {
     background-color: var(--semidark);

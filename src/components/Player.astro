@@ -1,0 +1,58 @@
+---
+const { audio, id, title } = Astro.props
+const play = `url('../img/play-100.svg')`
+const pause = `url('../img/pause-100.svg')`
+const speed = `url('../img/speed-1.svg')`
+---
+<div class="player full-width">
+    <div class="container">
+        <audio src={audio} />
+        <button class="player-btn btn"/> 
+        <h2 class="player-title">Псалом {id.replace(/^0+/, '')} {title}</h2>
+        <button class="speed-btn btn" />
+    </div>
+    <div class="progress">
+        <div class="time-line"/>
+    </div>
+</div>
+<style define:vars={{play, pause, speed}}>
+    .player {
+        background-color: var(--dark);
+        color: var(--green);
+        position: sticky;
+        top: var(--header-height);
+        height: calc(var(--play-btn-size) + .2rem);
+        overflow: hidden;
+        z-index: 60;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .btn {
+		background-color: var(--red);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+		width: var(--play-btn-size);
+		height: var(--play-btn-size);
+        margin-right: .5rem;
+        border-radius: 50%;
+	}
+    .player-btn {
+        background-image: var(--play);
+    }
+    .speed-btn {
+        background-image: var(--speed);
+    }
+    .progress {
+        height: .2rem;
+        cursor: pointer;
+    }
+    .time-line {
+        background-color: var(--green);
+        width: 50%;
+        height: 100%;
+    }
+</style>

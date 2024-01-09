@@ -1,18 +1,31 @@
 ---
 import MainLayout from './MainLayout.astro'
+import Player from '../components/Player.astro'
 
 const { frontmatter } = Astro.props
 ---
 
 <MainLayout pageTitle={frontmatter.title} imgUrl={frontmatter.imgUrl}>	
+	<Player
+		audio={frontmatter.audio}
+		id={frontmatter.id}
+		title={frontmatter.title}
+	/>
 	<h1 class="page-title">{frontmatter.title}</h1>
-	{ frontmatter.audio && <audio src={frontmatter.audio} controls/> }	
 	<slot />
 	<p class="city">Самара,</p>
 	<p class="date"><time>{frontmatter.date.slice(0,10)}</time></p>
-	<p class="author">{frontmatter.author}</p>	
+	<p class="author">{frontmatter.author}</p>
 </MainLayout>
 <style>
+	h1 {
+
+		overflow: hidden;
+	}
+	.page-audio {
+		position: sticky;
+		top: var(--header-height);
+	}
 	.city,
 	.date,
 	.author {

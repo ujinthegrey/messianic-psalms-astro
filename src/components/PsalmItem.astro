@@ -2,23 +2,23 @@
 const { url, id, title, description = 'Увы, описание отсутствует :-(' } = Astro.props
 ---
 <li>
-    <a href={url}>
+    <a class="psalm-item-title" href={url}>
         Псалом {id.replace(/^0+/, '')} {title}
     </a>
-    <br>
-    <button class="desctiption-btn">Открыть описание</button>
-    <p class="description hidden-description">button + script = {description}</p>
     <details>
-        <summary>Описание</summary>
-        <p class="detailis-description">details + summary + p = {description}</p>
+        <summary role="button">Описание</summary>
+        <p class="description">details + summary + p = {description}</p>
     </details>
 </li>
 <style>
-    button,
+    .psalm-item-title {
+        font-size: 1.7rem;
+    }
+    .btn,
     summary {
         color: var(--green);
-        width: 15rem;
-        padding: 1rem 0;
+        width: 8em;
+        padding: .5rem 0;
         margin-top: 1rem;
         font-size: 1rem;
         border: solid 2px var(--lightgray);
@@ -26,8 +26,7 @@ const { url, id, title, description = 'Увы, описание отсутств
         display: flex;
         justify-content: center;
     }
-    .description,
-    .detailis-description {
+    .description {
         margin: 1rem 0;
     }
     .hidden-description {
