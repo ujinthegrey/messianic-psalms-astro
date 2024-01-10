@@ -1,57 +1,75 @@
 ---
 const { audio, id, title } = Astro.props
-const play = `url('../img/play-100.svg')`
-const pause = `url('../img/pause-100.svg')`
-const speed = `url('../img/speed-1.svg')`
+const play = '../img/play-100.svg'
+const pause = '../img/pause-100.svg'
+const speed = '../img/speed-1.svg'
 ---
 <div class="player full-width">
+    <audio class="audio" src={audio}/>
     <div class="container">
-        <audio src={audio} />
-        <button class="player-btn btn"/> 
-        <h2 class="player-title">Псалом {id.replace(/^0+/, '')} {title}</h2>
-        <button class="speed-btn btn" />
+        <button class="play-btn btn">
+            <img class="play-img" src={play} alt="play">
+        </button>
+        <div class="title-progress">
+            <h2 class="player-title">Псалом {id.replace(/^0+/, '')} {title}</h2>
+            <div class="progress">
+                <div class="time-line"/>
+            </div>
+        </div>
+        <button class="speed-btn btn">
+            <img class="speed-img" src={speed} alt="play">
+        </button>
     </div>
-    <div class="progress">
-        <div class="time-line"/>
-    </div>
+    <script>
+        import '../scripts/player.js'
+    </script>
 </div>
 <style define:vars={{play, pause, speed}}>
     .player {
         background-color: var(--dark);
-        color: var(--green);
         position: sticky;
-        top: var(--header-height);
-        height: calc(var(--play-btn-size) + .2rem);
+        top: calc(var(--header-height) - 1px);
+        height: var(--player-height);
         overflow: hidden;
         z-index: 60;
     }
     .container {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: var(--player-height) 1fr var(--player-height);
+        grid-template-rows: var(--player-height);
+        gap: .5rem;
         align-items: center;
     }
-    .btn {
-		background-color: var(--red);
+    .btn > img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        font-style: italic;
         background-repeat: no-repeat;
-        background-position: center;
         background-size: cover;
-		width: var(--play-btn-size);
-		height: var(--play-btn-size);
-        margin-right: .5rem;
-        border-radius: 50%;
-	}
-    .player-btn {
-        background-image: var(--play);
+        shape-margin: 1rem;
     }
-    .speed-btn {
-        background-image: var(--speed);
+    .title-progress {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+    .player-title {
+        color: var(--green);
+        height: 1.5rem;
+        font-size: 1.25rem;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: clip;
     }
     .progress {
-        height: .2rem;
+        background-color: var(--green);
+        height: .75rem;
         cursor: pointer;
     }
     .time-line {
-        background-color: var(--green);
+        background-color: var(--semidark);
         width: 50%;
         height: 100%;
     }

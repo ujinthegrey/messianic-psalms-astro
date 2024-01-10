@@ -6,11 +6,11 @@ const { frontmatter } = Astro.props
 ---
 
 <MainLayout pageTitle={frontmatter.title} imgUrl={frontmatter.imgUrl}>	
-	<Player
+	{ frontmatter.audio && <Player
 		audio={frontmatter.audio}
 		id={frontmatter.id}
 		title={frontmatter.title}
-	/>
+	/>}
 	<h1 class="page-title">{frontmatter.title}</h1>
 	<slot />
 	<p class="city">Самара,</p>
@@ -18,10 +18,6 @@ const { frontmatter } = Astro.props
 	<p class="author">{frontmatter.author}</p>
 </MainLayout>
 <style>
-	h1 {
-
-		overflow: hidden;
-	}
 	.page-audio {
 		position: sticky;
 		top: var(--header-height);
