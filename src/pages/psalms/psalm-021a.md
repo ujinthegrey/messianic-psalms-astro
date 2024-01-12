@@ -4,7 +4,7 @@ author: 'Евгений Кошелев'
 date: 2023-04-05
 id: '021a'
 layout: '../../layouts/PostLayout.astro'
-subTitle: 'Мессия - совершенный Человек'
+messianicTitle: 'Мессия - совершенный Человек'
 title: 'Отвержение вместо принятия'
 ---
 

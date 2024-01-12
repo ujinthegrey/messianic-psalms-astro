@@ -10,8 +10,9 @@ const { frontmatter } = Astro.props
 		audio={frontmatter.audio}
 		id={frontmatter.id}
 		title={frontmatter.title}
+		messianicTitle={frontmatter.messianicTitle}
 	/>}
-	<h1 class="page-title">{frontmatter.title}</h1>
+	<h1 class="page-title">{frontmatter.title} | {frontmatter.messianicTitle}</h1>
 	<slot />
 	<p class="city">Самара,</p>
 	<p class="date"><time>{frontmatter.date.slice(0,10)}</time></p>
@@ -25,6 +26,10 @@ const { frontmatter } = Astro.props
 	.city,
 	.date,
 	.author {
+		font-size: 1.2rem;
 		text-align: center;
+	}
+	.author {
+		margin-bottom: 4rem;
 	}
 </style>

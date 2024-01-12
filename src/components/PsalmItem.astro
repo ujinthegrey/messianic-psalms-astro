@@ -1,9 +1,9 @@
 ---
-const { url, id, title, description = 'Увы, описание отсутствует :-(' } = Astro.props
+const { url, id, messianicTitle, title, description = 'Увы, описание отсутствует :-(' } = Astro.props
 ---
 <li>
     <a class="psalm-item-title" href={url}>
-        Псалом {id.replace(/^0+/, '')} {title}
+        Псалом {id.replace(/^0+/, '')} {title} | {messianicTitle}
     </a>
     <details>
         <summary role="button">Описание</summary>
@@ -12,7 +12,7 @@ const { url, id, title, description = 'Увы, описание отсутств
 </li>
 <style>
     .psalm-item-title {
-        font-size: 1.7rem;
+        font-size: var(--fz-card-title);
     }
     .btn,
     summary {

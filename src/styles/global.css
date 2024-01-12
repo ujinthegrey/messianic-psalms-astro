@@ -12,6 +12,8 @@
     --player-height: 3rem;
 
     --play-btn-size: 50px;
+
+    --fz-card-title: 1.7rem;
 }
 body {
     background-color: var(--semidark);
@@ -56,6 +58,15 @@ body {
     text-align: center;
     margin: 2rem 0;
     letter-spacing: .25rem;
+}
+
+/* ---------------MARKDOWN-FORMATING----------------- */
+h3 {
+    font-size: 1.7rem;
+    line-height: 4rem;
+    color: var(--green);
+    font-style: italic;
+    font-weight: 700;
 }
 
 /* ----------------LINKS-AND-BOTTOM-------------------- */

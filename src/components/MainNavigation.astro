@@ -6,15 +6,16 @@ const allPsalms = await Astro.glob('../pages/psalms/*.md')
     <h1 class="hidden-title">Главная Навигация</h1>
     <ol>
         <li><a href="/about/">О проекте</a></li>
+        <li><a href="/exegetic/">О принципах толкования</a></li>
         { allPsalms.map((psalm) =>
             <PsalmItem
                 url={psalm.url}
                 id={psalm.frontmatter.id}
                 title={psalm.frontmatter.title}
+                messianicTitle={psalm.frontmatter.messianicTitle}
                 description={psalm.frontmatter.description}
             />
          ) }
-
         <li><a href="/about-author/">Об авторе</a></li>
     </ol>
     <script>
@@ -23,11 +24,14 @@ const allPsalms = await Astro.glob('../pages/psalms/*.md')
 </nav>
 <style>
     nav {
-        margin: 2rem 0;
+        margin: 3rem 0;
     }
     ol {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 3rem;
+    }
+    a {
+        font-size: var(--fz-card-title);
     }
 </style>

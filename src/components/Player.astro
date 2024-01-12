@@ -1,11 +1,10 @@
 ---
 const { audio, id, title } = Astro.props
-const play = '../img/play-100.svg'
-const pause = '../img/pause-100.svg'
-const speed = '../img/speed-1.svg'
+const play = '../../img/play-100.svg'
+const speed = '../../img/speed-1.svg'
 ---
 <div class="player full-width">
-    <audio class="audio" src={audio}/>
+    <audio class="audio" preload="auto" src={audio}/>
     <div class="container">
         <button class="play-btn btn">
             <img class="play-img" src={play} alt="play">
@@ -24,7 +23,7 @@ const speed = '../img/speed-1.svg'
         import '../scripts/player.js'
     </script>
 </div>
-<style define:vars={{play, pause, speed}}>
+<style>
     .player {
         background-color: var(--dark);
         position: sticky;
@@ -65,12 +64,12 @@ const speed = '../img/speed-1.svg'
     }
     .progress {
         background-color: var(--green);
-        height: .75rem;
+        height: .5rem;
         cursor: pointer;
     }
     .time-line {
         background-color: var(--semidark);
-        width: 50%;
+        width: 0%;
         height: 100%;
     }
 </style>
