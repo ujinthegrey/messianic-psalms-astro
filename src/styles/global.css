@@ -62,8 +62,8 @@ body {
 
 /* ---------------MARKDOWN-FORMATING----------------- */
 h3 {
+    margin: 1.5rem 0;
     font-size: 1.7rem;
-    line-height: 4rem;
     color: var(--green);
     font-style: italic;
     font-weight: 700;
