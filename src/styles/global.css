@@ -58,6 +58,7 @@ body {
     text-align: center;
     margin: 2rem 0;
     letter-spacing: .25rem;
+    text-wrap: balance;
 }
 
 /* ---------------MARKDOWN-FORMATING----------------- */
@@ -67,6 +68,7 @@ h3 {
     color: var(--green);
     font-style: italic;
     font-weight: 700;
+    text-wrap: balance;
 }
 
 /* ----------------LINKS-AND-BOTTOM-------------------- */
@@ -85,6 +87,7 @@ summary:hover {
 /* --------------PARAGRAPHS-AND-HEADERS------------- */
 body > p {
     margin-bottom: 1.5rem;
+    text-wrap: pretty;
 }
 body > audio {
     margin-bottom: 1.5rem;

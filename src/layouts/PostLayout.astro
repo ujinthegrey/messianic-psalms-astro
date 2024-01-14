@@ -16,7 +16,7 @@ const { frontmatter } = Astro.props
 	<slot />
 	<p class="city">Самара,</p>
 	<p class="date"><time>{frontmatter.date.slice(0,10)}</time></p>
-	<p class="author">{frontmatter.author}</p>
+	<!-- <p class="author">{frontmatter.author}</p> -->
 </MainLayout>
 <style>
 	.page-audio {
@@ -28,6 +28,13 @@ const { frontmatter } = Astro.props
 	.author {
 		font-size: 1.2rem;
 		text-align: center;
+	}
+	.city {
+		margin-bottom: .5rem;
+	}
+	.date {
+		/* margin-bottom: 1rem; */
+		margin-bottom: 4rem;
 	}
 	.author {
 		margin-bottom: 4rem;
