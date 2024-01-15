@@ -38,10 +38,12 @@ function setProgress(e) {
     const width = this.clientWidth
     const clickX = e.offsetX
     const duration = audio.duration
-    audio.currentTime = clickX / width * duration
+    audio.currentTime = clickX / width * duration 
 }
 /* progress.addEventListener('click', setProgress) */
 progress.addEventListener('mouseup', setProgress)
+progress.addEventListener('touchend', setProgress)
+
 
 /* -------------END-PSALM------------ */
 function endPsalm() {
