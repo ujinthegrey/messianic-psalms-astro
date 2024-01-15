@@ -6,7 +6,7 @@ const allPsalms = await Astro.glob('../pages/psalms/*.md')
     <h1 class="hidden-title">Главная Навигация</h1>
     <ol>
         <li><a href="/about/">О проекте</a></li>
-        <li><a href="/exegetic/">О принципах толкования</a></li>
+        <li><a href="/hermeneutic/">О принципах толкования</a></li>
         { allPsalms.map((psalm) =>
             <PsalmItem
                 url={psalm.url}

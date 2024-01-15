@@ -40,18 +40,7 @@ function setProgress(e) {
     const duration = audio.duration
     audio.currentTime = clickX / width * duration 
 }
-/* progress.addEventListener('click', setProgress) */
-
-const isTouch = ( 'ontouchstart' in window ) || 
-                ( navigator.maxTouchPoints > 0 ) || 
-                ( navigator.msMaxTouchPoints > 0 )
-
-if (isTouch) {
-    progress.addEventListener('touchend', setProgress)
-} else {
-    progress.addEventListener('mouseup', setProgress)
-}
-
+progress.addEventListener('click', setProgress)
 
 /* -------------END-PSALM------------ */
 function endPsalm() {
