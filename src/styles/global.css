@@ -94,3 +94,8 @@ body > audio {
     min-width: 100%;
     background-color: #fff;
 }
+
+/* -------------------------FOCUS--------------------- */
+*:focus {
+    opacity: .7;
+}

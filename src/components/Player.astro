@@ -4,13 +4,15 @@ const play = '../../img/play-100.svg'
 const speed = '../../img/speed-1.svg'
 ---
 <div class="player full-width">
-    <audio class="audio" preload="auto" src={audio}/>
+    <audio class="audio" preload="auto">
+        <source src={audio} type="audio/mpeg">
+    </audio>
     <div class="container">
         <button class="play-btn btn">
             <img class="play-img" src={play} alt="play">
         </button>
         <div class="title-progress">
-            <h2 class="player-title">Псалом {id.replace(/^0+/, '')} {title}</h2>
+            <h2 class="player-title"><span class="reading-time"></span> Псалом {id.replace(/^0+/, '')} {title}</h2>
             <div class="progress">
                 <div class="time-line"/>
             </div>

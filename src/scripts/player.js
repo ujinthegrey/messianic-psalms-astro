@@ -3,6 +3,7 @@ const playImg = document.querySelector('.play-img')
 const speedBtn = document.querySelector('.speed-btn')
 const speedImg = document.querySelector('.speed-img')
 const audio = document.querySelector('.audio')
+const readingTime = document.querySelector('.reading-time')
 const progress = document.querySelector('.progress')
 const timeLine = document.querySelector('.time-line')
 
