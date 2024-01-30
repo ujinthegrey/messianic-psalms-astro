@@ -5,24 +5,23 @@ const { url, id, messianicTitle, title, description = 'Увы, описание 
     <a class="psalm-item-title" href={url}>
         Псалом {id.replace(/^0+/, '')}. {title} | {messianicTitle}
     </a>
-    <details>
-        <summary role="button">Описание</summary>
-        <p class="description">{description}</p>
-    </details>
+    <!-- script for button imported in MainNavigation.astro, so it may applyes for all buttons -->
+    <button class="btn description-btn">Описание</button>
+    <p class="description hidden-description">
+        {description.split('%').map(line => <span>{line}</span><br>)}
+    </span>
 </li>
 <style>
     .psalm-item-title {
         font-size: var(--fz-card-title);
         text-wrap: balance;
     }
-    .btn,
-    summary {
-        color: var(--green);
+    .btn {
         width: 8em;
         padding: .5rem 0;
         margin-top: 1rem;
         font-size: 1rem;
-        border: solid 2px var(--lightgray);
+        border: solid 2px;
         border-radius: .5rem;
         display: flex;
         justify-content: center;

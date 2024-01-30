@@ -18,7 +18,7 @@
         overflow: hidden;
     }
     .navigation,
-    .navigation-list,
+    .navigation-item,
     .navigation-list {
         display: flex;
         align-items: center;
@@ -31,5 +31,9 @@
         font-weight: 700;
         letter-spacing: .5rem;
         text-transform: uppercase;
+        transition: color .3s;
+    }
+    .navigation-link:hover {
+        color: var(--green);
     }
 </style>

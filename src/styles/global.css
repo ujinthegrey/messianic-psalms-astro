@@ -71,17 +71,17 @@ h3 {
     text-wrap: balance;
 }
 
-/* ----------------LINKS-AND-BOTTOM-------------------- */
+/* ----------------LINKS-AND-BOTTONS-------------------- */
 a,
-button,
-summary {
-    transition: opacity .2s;
+button {
     cursor: pointer;
+    transition: color .3s;
 }
 a:hover,
+a:focus,
 button:hover,
-summary:hover {
-    opacity: .85;
+button:focus {
+    color: var(--green);
 }
 
 /* --------------PARAGRAPHS-AND-HEADERS------------- */
@@ -95,7 +95,3 @@ body > audio {
     background-color: #fff;
 }
 
-/* -------------------------FOCUS--------------------- */
-*:focus {
-    opacity: .7;
-}
