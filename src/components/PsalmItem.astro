@@ -8,7 +8,7 @@ const { url, id, messianicTitle, title, description = 'Увы, описание 
     <details>
         <summary class="btn description-btn">Описание</summary>
         <p class="description hidden-description">
-            {description.split('%').map(line => <span>{line}</span><br>)}
+            {description.split('%').join('')}
         </p>
     </details>
     <!-- script for button imported in MainNavigation.astro, so it may applyes for all buttons -->
