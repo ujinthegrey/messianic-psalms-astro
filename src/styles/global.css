@@ -73,14 +73,17 @@ h3 {
 
 /* ----------------LINKS-AND-BOTTONS-------------------- */
 a,
-button {
+button,
+summary {
     cursor: pointer;
     transition: color .3s;
 }
 a:hover,
 a:focus,
 button:hover,
-button:focus {
+button:focus,
+summary:hover,
+summary:focus {
     color: var(--green);
 }
 
