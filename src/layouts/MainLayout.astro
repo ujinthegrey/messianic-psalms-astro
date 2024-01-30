@@ -17,6 +17,7 @@ const { pageTitle, imgUrl } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<!-- Alas! It breacks all scripts. Don't use ViewTransitions. -->
 		<!-- <ViewTransitions /> -->
 	</head>
 	<body class="content-grid">
