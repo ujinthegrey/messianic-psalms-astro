@@ -8,13 +8,13 @@ const descriptionLines = description.split('%').join('')
     </a>
     <details>
         <summary class="btn description-btn">Описание</summary>
-        <p class="description hidden-description">{descriptionLines}</p>
+        <p class="description">{descriptionLines}</p>
     </details>
-    <!-- script for button imported in MainNavigation.astro, so it may applyes for all buttons -->
-    <button class="btn description-btn">Описание</button>
+    <!-- For some reason does not work on netlify server -->
+    <!--     <button class="btn description-btn">Описание</button>
     <p class="description hidden-description">
         {description.split('%').map(line => <span>{line}</span><br>)}
-    </p>
+    </p> -->
 </li>
 <style>
     .psalm-item-title {
