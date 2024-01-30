@@ -1,5 +1,6 @@
 ---
 const { url, id, messianicTitle, title, description = 'Увы, описание пока отсутствует :-(' } = Astro.props
+const descriptionLines = description.split('%').join('')
 ---
 <li>
     <a class="psalm-item-title" href={url}>
@@ -7,9 +8,7 @@ const { url, id, messianicTitle, title, description = 'Увы, описание 
     </a>
     <details>
         <summary class="btn description-btn">Описание</summary>
-        <p class="description hidden-description">
-            {description.split('%').join('')}
-        </p>
+        <p class="description hidden-description">{descriptionLines}</p>
     </details>
     <!-- script for button imported in MainNavigation.astro, so it may applyes for all buttons -->
     <button class="btn description-btn">Описание</button>
