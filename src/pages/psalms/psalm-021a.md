@@ -1,5 +1,5 @@
 ---
-audio: '../../audio/psalm-015.mp3'
+audio: '../../audio/psalm-021a.mp3'
 author: 'Евгений Кошелев'
 date: 2023-08-16
 description: 'A) Не удаляйся от Меня (1-3);%
