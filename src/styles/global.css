@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 :root {
-    --dark: #111;
-    --semidark: #333;
-    --green: #9b9;
+    --dark: #091309;
+    --semidark: #303330;
+    --green: #a0bfa0;
     --blue: #a8b;
     --red: #f66;
-    --lightgray: #ddd;
+    --lightgray: #e0e0dd;
 
     --header-height: 4rem;
     --banner-height: 70vmin;
